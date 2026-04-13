@@ -36,8 +36,23 @@
           <button class="exercise-button">
             Exercise
           </button>
+           <button class="action-button nap-button">Nap</button>
         </div>
       </section>
+          <section class="message-panel">
+      <h2>Pet Comment</h2>
+      <div class="pet-comment" aria-live="polite">I am ready for my next adventure!</div>
+
+      <h3>Recent Activity</h3>
+      <div class="comment-log"></div>
+
+      <!-- Hidden template used with jQuery .clone() so each notification keeps the same style. -->
+      <div class="comment-entry comment-template hidden">
+        <span class="comment-action"></span>
+        <span class="comment-text"></span>
+      </div>
+    </section>
+
     </main>
 
     <!-- Your web-app is https, so your scripts need to be too -->
