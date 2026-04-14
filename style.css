@@ -1,53 +1,27 @@
-
 * {
-    box-sizing: border-box;
-  }
-  
- body {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
+  min-height: 1080px;
   font-family: Helvetica, Arial, sans-serif;
-  background: #5a81b8;
+  background: #b2883f;
   color: #1f2933;
 }
-  
-  main {
-    display:block;
-    height:175px;
-  }
-  
-  header {
-    border-bottom: 1px solid black;
-  }
-  
-  h1 {
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .bold {
-    font-weight: bold;
-  }
-  
-  p {
-    max-width: 600px;
-  }
-  
-  
-  li {
-    margin-bottom: 5px;
-  }
-  
-  footer {
-    padding-top: 25px;
-    border-top: 1px solid black;
-  }
-  
-  footer a {
-    float:left;
-    margin:5px;
-  }
-  
-  .subtitle {
+
+header {
+  text-align: center;
+  padding: 28px 18px 12px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.subtitle {
   margin: 10px auto 0;
   max-width: 560px;
   color: #52606d;
@@ -81,31 +55,134 @@
   background: #fdf2d8;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
-  
-  .dashboard div {
-    display:block;
-  }
-  
 
-  .dashboard {
-    float:left;
-    padding:20px;
+.mood-pill {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #eefbf0;
+  font-weight: 700;
+}
+
+.dashboard {
+  flex: 1 1 320px;
+}
+
+.stat-row {
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.action-button {
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #ffffff;
+  background: #2d6cdf;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+}
+
+.action-button:active {
+  transform: scale(0.97);
+}
+
+.treat-button {
+  background: #d97706;
+}
+
+.play-button {
+  background: #2563eb;
+}
+
+.exercise-button {
+  background: #059669;
+}
+
+.nap-button {
+  background: #7c3aed;
+}
+
+.message-panel {
+  padding: 22px;
+  margin-bottom: 32px;
+}
+
+.pet-comment {
+  margin-top: 14px;
+  padding: 16px;
+  border-left: 6px solid #2d6cdf;
+  border-radius: 14px;
+  background: #eff6ff;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.comment-log {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.comment-entry {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.comment-action {
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.pet-bounce { /* Class to trigger the pet bounce animation */
+  animation: petBounce 0.45s ease;
+}
+
+/* Keyframes for the pet bounce animation */
+@keyframes petBounce {
+  0% {
+    transform: translateY(0);
   }
-  
+  35% {
+    transform: translateY(-12px);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  85% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) { 
   .button-container {
-    margin-top:20px;
+    grid-template-columns: 1fr;
   }
-  
-  .button-container button {
-    width: 100px;
-      margin-right: 10px;
-      text-align: center;
-      display: inline-block;
-      float: left;
-    font-size:15px;
-    background-color: #1e2835;
-    border-color: #404853;
-    cursor:pointer;
-    background-image: linear-gradient(to bottom,rgba(246,246,246,.1)0%,rgba(30,40,53,0)66%);
-    color: #fafafa;
+
+  .stat-row {
+    font-size: 16px;
   }
+}
