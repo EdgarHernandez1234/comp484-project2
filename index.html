@@ -2,64 +2,57 @@
 <html>
   <head>
     <title>Your Giga Pet</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
     <header>
-      <h1>
-       Princess the Pitbull
+      <h1>Princess the Pitbull</h1>
       <p class="subtitle">Feed, play with, exercise, and tuck your pet in for a nap.</p>
-
-      </h1>
     </header>
 
     <main class="pet-card">
       <section class="pet-image-container">
          <!-- Replace pet image with your own pet image -->
-        <img class="pet-image" src="./images/hound.jpg">
+        <img class="pet-image" src="" alt="Princess the Pitbull">
         <div class="mood-pill">Mood: <span class="mood">Happy</span></div>
-
       </section>
+
       <section class="dashboard">
         <div class="stat-row">Name: <strong><span class="name"></span></strong></div>
         <div class="stat-row">Weight: <strong><span class="weight"></span> pounds</strong></div>
         <div class="stat-row">Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+        <div class="stat-row">Energy: <strong><span class="energy"></span></strong></div>
+
         <div class="button-container">
-          <button class=" action-button treat-button">
-            Treat
-          </button>
-          <button class="action-button play-button">
-            Play
-          </button>
-          <button class="action-button exercise-button">
-            Exercise
-          </button>
-           <button class="action-button nap-button">Nap</button>
+          <button class="action-button treat-button">Treat</button>
+          <button class="action-button play-button">Play</button>
+          <button class="action-button exercise-button">Exercise</button>
+          <button class="action-button nap-button">Nap</button>
         </div>
       </section>
-          <section class="message-panel">
-      <h2>Pet Comment</h2>
-      <div class="pet-comment" aria-live="polite">I am ready for my next adventure!</div>
 
-      <h3>Recent Activity</h3>
-      <div class="comment-log"></div>
+      <section class="message-panel">
+        <h2>Pet Comment</h2>
+        <div class="pet-comment" aria-live="polite">I am ready for my next adventure!</div>
 
-      <!-- Hidden template used with jQuery .clone() so each notification keeps the same style. -->
-      <div class="comment-entry comment-template hidden">
-        <span class="comment-action"></span>
-        <span class="comment-text"></span>
-      </div>
-    </section>
+        <h3>Recent Activity</h3>
+        <div class="comment-log"></div>
 
+        <div class="comment-entry comment-template hidden">
+          <span class="comment-action"></span>
+          <span class="comment-text"></span>
+        </div>
+      </section>
     </main>
 
     <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>
