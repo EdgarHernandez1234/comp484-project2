@@ -13,27 +13,31 @@
   <body>
     <header>
       <h1>
-        This is your Giga Pet
+       Princess the Pitbull
+      <p class="subtitle">Feed, play with, exercise, and tuck your pet in for a nap.</p>
+
       </h1>
     </header>
 
-    <main>
+    <main class="pet-card">
       <section class="pet-image-container">
          <!-- Replace pet image with your own pet image -->
-        <img class="pet-image" src="">
+        <img class="pet-image" src="./images/hound.jpg">
+        <div class="mood-pill">Mood: <span class="mood">Happy</span></div>
+
       </section>
       <section class="dashboard">
-        <div>Name: <strong><span class="name"></span></strong></div>
-        <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
-        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+        <div class="stat-row">Name: <strong><span class="name"></span></strong></div>
+        <div class="stat-row">Weight: <strong><span class="weight"></span> pounds</strong></div>
+        <div class="stat-row">Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
         <div class="button-container">
-          <button class="treat-button">
+          <button class=" action-button treat-button">
             Treat
           </button>
-          <button class="play-button">
+          <button class="action-button play-button">
             Play
           </button>
-          <button class="exercise-button">
+          <button class="action-button exercise-button">
             Exercise
           </button>
            <button class="action-button nap-button">Nap</button>
@@ -56,8 +60,6 @@
     </main>
 
     <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
   </body>
 </html>
