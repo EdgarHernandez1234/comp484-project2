@@ -106,7 +106,7 @@ function determineMood() {
   return 'Happy';
 }
 
-function chooseComment(actionType) {
+function chooseComment(actionType) { // What princess can say when clicking one of the buttons
   if (actionType === 'treat') {
     return 'Yum! I love treats!';
   }
@@ -137,7 +137,7 @@ function showNotification(actionName, commentText) {
   $('.comment-log .comment-entry').slice(5).remove();
 }
 
-function bouncePet() {
+function bouncePet() { // Helps Princess bounce when clicking one of the buttons
   $('.pet-image').removeClass('pet-bounce');
   $('.pet-image')[0].offsetWidth;
   $('.pet-image').addClass('pet-bounce');
