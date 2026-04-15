@@ -1,11 +1,15 @@
+// Used Jquery methods .load() and .clone().
+// .load() is used to trigger a function when the pet image has finished loading.
+// .clone() is used to create a copy of the comment template for each new activity entry in the comment log. 
+
 $(function () { // Makes sure that your function is called once all the DOM elements of the page are ready to be used.
+  var $petImage = $('.pet-image');
   
-  // When the page loads, we want to set the pet image and show a welcome message.
-  $('.pet-image')
-    .attr('src', buildPetImage())
-    .load(function () {
-      showNotification('Welcome', 'Woof! I am Princess, and I am ready to play.');
+  // Used .load() here for one of my jQuery methods. 
+  $petImage.load(function () {
+    showNotification('Welcome', 'Woof! New Friend!');
   });
+  $petImage.attr('src', buildPetImage());
   // Called function to update the name, happiness, and weight of our pet in our HTML
   checkAndUpdatePetInfoInHtml();
 
@@ -23,10 +27,6 @@ var pet_info = {
   happiness: 8,
   energy: 6
 };
-
-function buildPetImage() {
-  return 'images/hound.png';
-}
 
 function clickedTreatButton() {
   pet_info.happiness += 1; // Increase pet happiness
@@ -90,7 +90,7 @@ function updatePetInfoInHtml() {
   $('.mood').text(determineMood());
 }
 
-function determineMood() {
+function determineMood() { 
   if (pet_info.energy <= 2) {
     return 'Sleepy';
   }
@@ -108,17 +108,17 @@ function determineMood() {
 
 function chooseComment(actionType) {
   if (actionType === 'treat') {
-    return 'Yum! Snacks make my tail wag faster.';
+    return 'Yum! I love treats!';
   }
 
   if (actionType === 'play') {
-    return 'That was fun. I feel lighter on my paws!';
+    return 'Let\'s play fetch! I love fetch!';
   }
 
   if (actionType === 'exercise') {
-    return 'Whew. Cardio is tough, but I know it helps.';
+    return 'I rather play than exercise, but I know it\'s good for me!';
   }
-
+ // Added nap as last option so this acts as a default if the other options are not chosen.
   return 'Best nap ever. My energy meter is back up!';
 }
 
@@ -145,4 +145,8 @@ function bouncePet() {
   setTimeout(function () {
     $('.pet-image').removeClass('pet-bounce');
   }, 450);
+}
+// This allows the pet image to be displayed from JavaScript instead of hardcoding it in the HTML.
+function buildPetImage() {
+  return 'images/hound.png';
 }
